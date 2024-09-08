@@ -1,0 +1,102 @@
+/* src/components/StockistBuilding.css */
+.stockist-building {
+    padding: 4rem 2rem;
+    background: linear-gradient(135deg, #1e1e1e, #333); /* Background gradient */
+    color: #fff;
+    display: flex;
+    justify-content: center;
+}
+
+.stockist-content {
+    max-width: 1200px;
+    width: 100%;
+    background: rgba(0, 0, 0, 0.8); /* Slightly darker background for content */
+    padding: 2rem;
+    border-radius: 15px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3); /* Shadow for a lifted effect */
+}
+
+.stockist-content h1 {
+    font-size: 2.5rem;
+    margin-bottom: 2rem;
+    color: #ffffff;
+    text-align: center;
+    text-shadow: 0 2px 4px rgba(0, 0, 0, 0.5);
+}
+
+.stockist-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr)); /* Responsive grid */
+    gap: 2rem; /* Space between grid items */
+}
+
+.stockist-grid-item {
+    background: rgba(255, 255, 255, 0.1); /* Slightly lighter background for items */
+    padding: 1.5rem;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Shadow for a lifted effect */
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+}
+
+.stockist-icon {
+    width: 50px; /* Adjust icon size as needed */
+    height: auto;
+    margin-bottom: 1rem; /* Space between icon and text */
+}
+
+.stockist-grid-item h3 {
+    font-size: 1.6rem;
+    margin-bottom: 0.5rem;
+    color: #ffffff;
+}
+
+.stockist-grid-item p {
+    font-size: 1rem;
+    color: #e0e0e0;
+    line-height: 1.6;
+}
+
+/* Responsive Design */
+@media (max-width: 1200px) {
+    .stockist-content {
+        padding: 1.5rem; /* Adjust padding for medium screens */
+    }
+
+    .stockist-content h1 {
+        font-size: 2.2rem; /* Adjust heading size for medium screens */
+    }
+}
+
+@media (max-width: 992px) {
+    .stockist-content {
+        padding: 1rem; /* Adjust padding for smaller screens */
+    }
+
+    .stockist-content h1 {
+        font-size: 2rem; /* Adjust heading size for smaller screens */
+    }
+}
+
+@media (max-width: 768px) {
+    .stockist-grid {
+        grid-template-columns: 1fr; /* Stack items vertically on smaller screens */
+    }
+}
+
+@media (max-width: 480px) {
+    .stockist-icon {
+        width: 40px; /* Adjust icon size for very small screens */
+    }
+
+    .stockist-grid-item h3 {
+        font-size: 1.4rem; /* Adjust heading size for very small screens */
+    }
+
+    .stockist-grid-item p {
+        font-size: 0.9rem; /* Adjust paragraph size for very small screens */
+    }
+}

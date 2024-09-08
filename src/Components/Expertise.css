@@ -1,0 +1,117 @@
+/* src/components/Expertise.css */
+.expertise {
+    padding: 4rem 2rem;
+    background: linear-gradient(135deg, #1e1e1e, #333); /* Updated linear gradient */
+    color: #fff;
+    display: flex;
+    justify-content: center;
+}
+
+.expertise-container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    max-width: 1200px;
+    width: 100%;
+    margin: 0 auto; /* Centering container */
+}
+
+.expertise-image {
+    flex: 1;
+    position: relative;
+    overflow: hidden;
+    border-radius: 15px;
+    margin-right: 2rem; /* Space between image and content */
+}
+
+.expertise-image img {
+    width: 100%;
+    height: auto;
+    display: block;
+    filter: brightness(0.8); /* Dim image slightly for better text contrast */
+}
+
+.expertise-content {
+    flex: 1.5;
+    padding-left: 2rem;
+    background: rgba(0, 0, 0, 0.7); /* Slightly darker background for text area */
+    border-radius: 15px;
+    padding: 2rem;
+    backdrop-filter: blur(8px); /* Apply blur effect */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5); /* Shadow for a lifted effect */
+    font-family: 'Roboto', sans-serif; /* Formal and professional font */
+}
+
+.expertise-content h2 {
+    font-size: 2.5rem;
+    margin-bottom: 1.5rem;
+    background: linear-gradient(135deg, #00aaff, #f7a1a1, #ff0a0a); /* Gradient colors */
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent; /* Text color to transparent to show gradient */
+    background-clip: text;
+    color: transparent; /* Make the color transparent to show the gradient */
+    text-shadow: 0 1px 3px rgba(0, 0, 0, 0.5); /* Subtle text shadow */
+}
+
+.expertise-item {
+    margin-bottom: 1.5rem;
+}
+
+.expertise-item h3 {
+    font-size: 1.6rem;
+    margin-bottom: 0.5rem;
+    color: #f0f0f0; /* Light and formal color */
+    font-weight: 500; /* Semi-bold for headings */
+}
+
+.expertise-item p {
+    font-size: 1rem;
+    color: #d0d0d0; /* Slightly darker text color for contrast */
+    line-height: 1.6;
+    font-weight: 300; /* Light weight for readability */
+}
+
+/* Responsive Design */
+@media (max-width: 1200px) {
+    .expertise-container {
+        max-width: 1000px; /* Adjust container width for medium screens */
+    }
+}
+
+@media (max-width: 992px) {
+    .expertise-container {
+        max-width: 900px; /* Adjust container width for smaller screens */
+    }
+}
+
+@media (max-width: 768px) {
+    .expertise-container {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .expertise-image {
+        margin-right: 0;
+        margin-bottom: 2rem; /* Space between image and content on small screens */
+    }
+
+    .expertise-content {
+        padding-left: 0;
+        padding-top: 2rem;
+        margin-top: 2rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .expertise-content h2 {
+        font-size: 2rem; /* Adjust heading size for small screens */
+    }
+
+    .expertise-item h3 {
+        font-size: 1.4rem; /* Adjust heading size for small screens */
+    }
+
+    .expertise-item p {
+        font-size: 0.9rem; /* Adjust paragraph size for small screens */
+    }
+}

@@ -1,0 +1,107 @@
+/* src/components/SalesGrowth.css */
+.salesgrowth {
+    display: flex;
+    align-items: center;
+    padding: 4rem 2rem;
+    background: linear-gradient(135deg, #1e1e1e, #333); /* Background gradient */
+    color: #fff;
+    flex-direction: row; /* Ensure content is on the left and image on the right */
+    justify-content: space-between; /* Space between content and image */
+}
+
+.salesgrowth-image {
+    flex: 1;
+    position: relative;
+    overflow: hidden;
+    border-radius: 15px;
+    margin-left: 2rem; /* Space between image and content */
+}
+
+.salesgrowth-image img {
+    width: 100%;
+    height: auto;
+    display: block;
+    filter: brightness(0.7); /* Dim image slightly for better text contrast */
+}
+
+.salesgrowth-content {
+    flex: 1.5;
+    padding: 2rem;
+    background: rgba(0, 0, 0, 0.6); /* Slightly darker background for content area */
+    border-radius: 15px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3); /* Shadow for a lifted effect */
+}
+
+.salesgrowth-content h2 {
+    font-size: 2.5rem;
+    margin-bottom: 2rem;
+    color: #1a2a34;
+    background: linear-gradient(135deg, #00aaff, #f7a1a1, #ff0a0a); /* Gradient colors */
+    -webkit-background-clip: text; /* Gradient effect for text */
+    -webkit-text-fill-color: transparent; /* Hide the original text color */
+    background-clip: text;
+    text-shadow: 0 2px 4px rgba(0, 0, 0, 0.5);
+}
+
+.content-item {
+    margin-bottom: 1.5rem;
+}
+
+.content-item h3 {
+    font-size: 1.8rem;
+    margin-bottom: 0.5rem;
+    color: #ffffff;
+}
+
+.content-item p {
+    font-size: 1rem;
+    color: #e0e0e0;
+    line-height: 1.6;
+}
+
+/* Responsive Design */
+@media (max-width: 1200px) {
+    .salesgrowth-content h2 {
+        font-size: 2.2rem; /* Adjust heading size for medium screens */
+    }
+}
+
+@media (max-width: 992px) {
+    .salesgrowth-content {
+        padding: 1.5rem; /* Adjust padding for medium screens */
+    }
+
+    .salesgrowth-content h2 {
+        font-size: 2rem; /* Adjust heading size for smaller screens */
+    }
+}
+
+@media (max-width: 768px) {
+    .salesgrowth {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .salesgrowth-image {
+        margin-left: 0;
+        margin-bottom: 2rem; /* Space between image and content on smaller screens */
+    }
+
+    .salesgrowth-content {
+        padding: 2rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .salesgrowth-content h2 {
+        font-size: 1.8rem; /* Adjust heading size for very small screens */
+    }
+
+    .content-item h3 {
+        font-size: 1.6rem; /* Adjust heading size for very small screens */
+    }
+
+    .content-item p {
+        font-size: 0.9rem; /* Adjust paragraph size for very small screens */
+    }
+}

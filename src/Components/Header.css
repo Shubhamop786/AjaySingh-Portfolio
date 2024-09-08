@@ -1,0 +1,129 @@
+/* src/components/Header.css */
+.header {
+  background-color: #1e1e1e;
+  padding: 1rem 2rem;
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+
+.header .logo {
+  display: flex;
+  align-items: center;
+}
+
+.header .logo img {
+  height: 100px;
+  width: auto;
+}
+
+.header .burger-menu {
+  display: none;
+  flex-direction: column;
+  justify-content: space-around;
+  background: none;
+  border: none;
+  cursor: pointer;
+  padding: 0;
+  width: 30px;
+  height: 30px;
+}
+
+.header .burger-menu .bar {
+  height: 3px;
+  width: 30px;
+  background-color: #fff;
+  border-radius: 5px;
+}
+
+.header nav {
+  flex-grow: 1;
+  display: flex;
+  justify-content: center;
+}
+
+.header nav ul {
+  list-style: none;
+  display: flex;
+  gap: 2rem;
+  margin: 0;
+}
+
+.header nav ul li {
+  display: inline;
+}
+
+.header nav ul li a {
+  color: #fff;
+  text-decoration: none;
+  font-size: 1.2rem;
+}
+
+/* Responsive Design for Header */
+@media (max-width: 1200px) {
+  .header .logo img {
+    height: 80px;
+  }
+
+  .header nav ul {
+    gap: 1.5rem;
+  }
+}
+
+@media (max-width: 992px) {
+  .header {
+    padding: 1rem;
+  }
+
+  .header .logo img {
+    height: 70px;
+  }
+
+  .header nav ul {
+    gap: 1rem;
+  }
+}
+
+@media (max-width: 768px) {
+  .header {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .header nav {
+    width: 100%;
+    justify-content: flex-start;
+  }
+
+  .header nav ul {
+    flex-direction: column;
+    width: 100%;
+    display: none; /* Hide the nav items by default */
+  }
+
+  .header nav.open ul {
+    display: flex; /* Show nav items when menu is open */
+  }
+
+  .header .burger-menu {
+    display: flex; /* Show burger menu on mobile */
+  }
+}
+
+@media (max-width: 576px) {
+  .header .logo img {
+    height: 60px;
+  }
+
+  .header nav ul {
+    gap: 0.5rem;
+  }
+
+  .header nav ul li a {
+    font-size: 0.9rem;
+  }
+}

@@ -1,0 +1,93 @@
+/* src/components/Companies.css */
+.companies {
+    padding: 4rem 2rem;
+    background: linear-gradient(135deg, #1e1e1e, #333); /* Background gradient for outer div */
+    color: #fff;
+    display: flex;
+    justify-content: center;
+}
+
+.companies-container {
+    max-width: 1200px;
+    width: 100%;
+}
+
+.companies-content {
+    background: rgba(0, 0, 0, 0.7); /* Slightly darker background for content */
+    padding: 2rem;
+    border-radius: 15px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3); /* Shadow for a lifted effect */
+}
+
+.companies-content h2 {
+    font-size: 2.5rem;
+    margin-bottom: 2rem;
+    color: #ffffff;
+    text-shadow: 0 2px 4px rgba(0, 0, 0, 0.5);
+}
+
+.grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr); /* 2 columns */
+    gap: 2rem; /* Space between grid items */
+}
+
+.grid-item {
+    position: relative;
+    padding: 1.5rem;
+    border-radius: 10px;
+    background: rgba(255, 255, 255, 0.1); /* Slightly lighter background for items */
+    box-shadow: 0 4px 8px rgba(25, 1, 1, 0.073); /* Shadow for a lifted effect */
+    border: 2px solid transparent; /* Transparent border to allow gradient border */
+    border-image: linear-gradient(135deg, #a0b102, #004d99) 1; /* Gradient border */
+    border-radius: 10px; /* Rounded corners */
+}
+
+.grid-item h3 {
+    font-size: 1.6rem;
+    margin-bottom: 0.5rem;
+    color: #ffffff; /* Text color */
+}
+
+.grid-item p {
+    font-size: 1rem;
+    color: #e0e0e0; /* Light gray text */
+    line-height: 1.6;
+}
+
+/* Responsive Design */
+@media (max-width: 1200px) {
+    .companies-container {
+        max-width: 1000px; /* Adjust container width for medium screens */
+    }
+}
+
+@media (max-width: 992px) {
+    .companies-container {
+        max-width: 900px; /* Adjust container width for smaller screens */
+    }
+}
+
+@media (max-width: 768px) {
+    .grid {
+        grid-template-columns: 1fr; /* Stack items vertically on smaller screens */
+    }
+
+    .companies-content {
+        padding: 1rem; /* Adjust padding for smaller screens */
+    }
+
+    .companies-content h2 {
+        font-size: 2rem; /* Adjust heading size for smaller screens */
+    }
+}
+
+@media (max-width: 480px) {
+    .grid-item h3 {
+        font-size: 1.4rem; /* Adjust heading size for very small screens */
+    }
+
+    .grid-item p {
+        font-size: 0.9rem; /* Adjust paragraph size for very small screens */
+    }
+}

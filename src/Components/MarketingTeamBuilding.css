@@ -1,0 +1,98 @@
+/* src/components/MarketingTeamBuilding.css */
+.marketing-team-building {
+    display: flex;
+    align-items: center;
+    padding: 4rem 2rem;
+    background: linear-gradient(135deg, #1e1e1e, #333); /* Background gradient */
+    color: #fff;
+}
+
+.marketing-image {
+    flex: 1;
+    position: relative;
+    overflow: hidden;
+    border-radius: 15px;
+    margin-right: 2rem; /* Space between image and content */
+}
+
+.marketing-image img {
+    width: 100%;
+    height: auto;
+    display: block;
+    filter: brightness(0.7); /* Dim image slightly for better text contrast */
+}
+
+.marketing-content {
+    flex: 1.5;
+    padding: 2rem;
+    background: rgba(0, 0, 0, 0.6); /* Slightly darker background for content area */
+    border-radius: 15px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3); /* Shadow for a lifted effect */
+}
+
+.marketing-content h2 {
+    font-size: 2.5rem;
+    margin-bottom: 2rem;
+    color: #1a2a34;
+    background: linear-gradient(135deg, #00aaff, #f7a1a1, #ff0a0a); /* Gradient colors */
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent; /* Text color to transparent to show gradient */
+    background-clip: text;
+    color: transparent; /* Make the color transparent to show the gradient */
+    text-shadow: 0 2px 4px rgba(0, 0, 0, 0.5);
+}
+
+.content-item {
+    margin-bottom: 1.5rem;
+}
+
+.content-item h3 {
+    font-size: 1.8rem;
+    margin-bottom: 0.5rem;
+    color: #ffffff;
+}
+
+.content-item p {
+    font-size: 1rem;
+    color: #e0e0e0;
+    line-height: 1.6;
+}
+
+/* Responsive Design */
+@media (max-width: 1200px) {
+    .marketing-content h2 {
+        font-size: 2.2rem; /* Adjust heading size for medium screens */
+    }
+}
+
+@media (max-width: 992px) {
+    .marketing-content h2 {
+        font-size: 2rem; /* Adjust heading size for smaller screens */
+    }
+}
+
+@media (max-width: 768px) {
+    .marketing-team-building {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .marketing-image {
+        margin-right: 0;
+        margin-bottom: 2rem; /* Space between image and content on smaller screens */
+    }
+
+    .marketing-content {
+        padding: 2rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .content-item h3 {
+        font-size: 1.6rem; /* Adjust heading size for very small screens */
+    }
+
+    .content-item p {
+        font-size: 0.9rem; /* Adjust paragraph size for very small screens */
+    }
+}
